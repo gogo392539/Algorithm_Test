@@ -27,5 +27,4 @@ output
 66.667%
 55.556%
 */
-
 int fn_Averege(int nCount);

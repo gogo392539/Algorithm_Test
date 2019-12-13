@@ -1,10 +1,13 @@
-#include <iostream>
-#include <string>
-
-using namespace std;
+#include "stdafx.h"
+#include "array.h"
 
 int main(void)
 {
-	cout << "helle" << endl;
+	int nCount = 0;
+	cin >> nCount;
+
+	fn_Averege(nCount);
+
+
 	return 0;
 }
