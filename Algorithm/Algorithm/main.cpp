@@ -1,12 +1,10 @@
 #include "stdafx.h"
 #include "array.h"
+#include "function.h"
 
 int main(void)
 {
-	int nCount = 0;
-	cin >> nCount;
-
-	fn_Averege(nCount);
+	fn_CroatiaAlphabet();
 
 
 	return 0;
