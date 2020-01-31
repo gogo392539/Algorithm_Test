@@ -4,7 +4,7 @@
 
 int main(void)
 {
-	fn_CroatiaAlphabet();
+	fn_GroupWords();
 
 
 	return 0;

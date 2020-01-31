@@ -1,6 +1,7 @@
 #include "array.h"
 #include "stdafx.h"
 #include <sstream>
+#include <map>
 
 
 /*
@@ -230,9 +231,16 @@ int fn_GroupWords()
 
 	cin >> nCount;
 
+	if (nCount > 100) {
+		return -1;
+	}
 
 	for (int i = 0; i < nCount; i++) {
 		cin >> strWords;
+
+		if (strWords.length() > 100) {
+			continue;
+		}
 
 		if (fn_Check_GroupWords(strWords) == 0) {
 			nIdx++;
@@ -241,15 +249,35 @@ int fn_GroupWords()
 	
 	cout << nIdx << endl;
 
-
-
-
-
 	return 0;
 }
 
 int fn_Check_GroupWords(string& strWords)
 {
-	char arAlphabets[26] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
+	int nLen = 0;
+
+	std::map<char, char> mAlphabets;
+
+	for (int i = 1; i < strWords.length(); i++) {
+		if (i == 1) {
+			mAlphabets.insert(std::map<char, char>::value_type(strWords.at(i - 1), strWords.at(i - 1)));
+		}
+
+		
+		if (strWords.at(i - 1) == strWords.at(i)) {
+
+		}
+		else {
+			std::map<char, char>::iterator iter = mAlphabets.find(strWords.at(i));
+			if (iter == mAlphabets.end()) {
+				mAlphabets.insert(map<char, char>::value_type(strWords.at(i), strWords.at(i)));
+			}
+			else {
+				return -1;
+			}
+			
+		}
+	}
+
 	return 0;
 }
