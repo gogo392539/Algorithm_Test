@@ -63,3 +63,46 @@ int fn_Sugar()
 	
 	return 0;
 }
+
+int fn_Hive()
+{
+	int nIndex = 0;
+	int nResultData = 0;
+	int nInputData = 0;
+
+	cin >> nInputData;
+
+	nIndex = 1;
+	while (1) {
+		nResultData = 1 + (3 * (nIndex * (nIndex - 1)));
+
+		if (nResultData >= nInputData) {
+			cout << nIndex << endl;
+			break;
+		}
+
+		nIndex++;
+	}
+
+	return 0;
+}
+
+int fn_Find_A_Fraction()
+{
+	int nIndex = 0;
+	int nResultData = 0;
+	int nDenominator = 0;
+	int nNumerator = 0;
+	int nInputData = 0;
+	char szResult[20] = { 0, };
+
+	cin >> nInputData;
+
+	while(1) {
+
+	}
+
+
+
+	return 0;
+}
